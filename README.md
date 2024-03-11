@@ -19,7 +19,7 @@ The following software must be installed to run the project:
 - Selenium
 - Google Forms
 - Google Sheets
-## Setup
+## Installing
 
 ``` bash
 git clone https://github.com/cyroplex/Data-Entry-Job-Automation.git
