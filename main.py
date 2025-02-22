@@ -7,7 +7,7 @@ import time
 form_url = "https://docs.google.com/forms/d/e/1FAIpQLScyJlmHNyGG6VlNs4OEufDFYosum4TISxEMz0XLG-0vz8f3bQ/viewform?usp=sf_link"
 zillow_url = "https://appbrewery.github.io/Zillow-Clone/"
 
-#web scraping
+
 response = requests.get(zillow_url)
 soup = BeautifulSoup(response.content, "html.parser")
 longaddress = soup.find_all("a", class_="StyledPropertyCardDataArea-anchor")
@@ -20,7 +20,7 @@ link_data = soup.find_all("a", class_="StyledPropertyCardDataArea-anchor")
 link = [link["href"] for link in link_data]
 data_len = len(link_data)
 
-#sending data to form
+
 option = webdriver.ChromeOptions()
 option.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=option)
